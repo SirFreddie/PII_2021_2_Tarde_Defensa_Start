@@ -18,7 +18,7 @@ namespace Ucu.Poo.Defense
         /// <param name="obj">El objeto a comparar.</param>
         /// <returns><c>True</c> si este objeto es igual al que se recibe como parámetro; <c>False</c> en caso
         /// contrario.</returns>
-        public bool Equals(object obj)
+        public override bool Equals(object obj)
         {
             // Si el otro objeto es null no puede ser igual a este objeto que no es null; retornar False
             if (obj == null)
@@ -33,8 +33,7 @@ namespace Ucu.Poo.Defense
             // Retornar True si el otro objeto tiene el mismo texto que este objeto; y False en caso contrario
             else
             {
-                return this.Type.Equals(((Residue)obj).Type) &&
-                    this.Name.Equals(((Residue)obj).Name);
+                return this.Type.Equals(((Residue)obj).Type) && this.Name.Equals(((Residue)obj).Name);
             }
         }
     }
